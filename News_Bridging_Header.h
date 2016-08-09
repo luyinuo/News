@@ -10,5 +10,6 @@
 #define News_Bridging_Header_h
 #import <Masonry/Masonry.h>
 #import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif /* News_Bridging_Header_h */

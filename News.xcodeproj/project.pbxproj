@@ -22,7 +22,8 @@
 		19E775771D51875900734787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E775761D51875900734787 /* ViewController.swift */; };
 		19E7757C1D51875900734787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E7757B1D51875900734787 /* Assets.xcassets */; };
 		19E7757F1D51875900734787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E7757D1D51875900734787 /* LaunchScreen.storyboard */; };
-		22E09DA3CEDE37E14F6B4494 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301D6EC86F4125E095C8C358 /* libPods.a */; };
+		19EFC3D31D587EB200BEFD6B /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EFC3D21D587EB200BEFD6B /* ArticleTableViewCell.swift */; };
+		B925CDE4A5BD9B47E548F551 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53445D231894CBC6A8529A2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +45,10 @@
 		19E7757B1D51875900734787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19E7757E1D51875900734787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19E775801D51875900734787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		301D6EC86F4125E095C8C358 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19EFC3D21D587EB200BEFD6B /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		6558AFC68879AF016D2EEDE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C4209732883CECACED577FBC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F53445D231894CBC6A8529A2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E09DA3CEDE37E14F6B4494 /* libPods.a in Frameworks */,
+				B925CDE4A5BD9B47E548F551 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +165,7 @@
 		19E226261D51CADC0018D66E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19EFC3D21D587EB200BEFD6B /* ArticleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 		B6EBBC58E335754E130BC435 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				301D6EC86F4125E095C8C358 /* libPods.a */,
+				F53445D231894CBC6A8529A2 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				194922681D52FB7A00848A69 /* HomeModel.swift in Sources */,
 				194922661D52FB3E00848A69 /* Reflect.swift in Sources */,
 				194922641D52FB3E00848A69 /* Reflect+Property.swift in Sources */,
+				19EFC3D31D587EB200BEFD6B /* ArticleTableViewCell.swift in Sources */,
 				194922511D51F2F200848A69 /* HttpTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = News/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyn.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = News/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyn.News;
 				PRODUCT_NAME = "$(TARGET_NAME)";
