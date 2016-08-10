@@ -39,11 +39,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func fetchData() {
         dataSource.removeAll()
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let mananger  = AFURLSessionManager.init(sessionConfiguration: configuration)
-        let url = NSURL.init(string: "http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html")
-        let request = NSURLRequest.init(URL: url!)
-        let dataTask = mananger.dataTaskWithRequest(request) { (response, responseObject, error) in
+        let url = "http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html"
+        HttpTool.sharedInstance.apiFetchData(url) { (response, responseObject, error) in
             if(error != nil){
                 print("\(error)")
             }else{
@@ -60,14 +57,10 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.tableView.reloadData()
             }
         }
-        dataTask.resume()
     }
     func fetchMoreData(){
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let mananger  = AFURLSessionManager.init(sessionConfiguration: configuration)
-        let url = NSURL.init(string:String(format:  "http://c.m.163.com/nc/article/headline/T1348647853363/%i-%i.html",indexPage+maxnum,maxnum))
-        let request = NSURLRequest.init(URL: url!)
-        let dataTask = mananger.dataTaskWithRequest(request) { (response, responseObject, error) in
+        let url = String(format:  "http://c.m.163.com/nc/article/headline/T1348647853363/%i-%i.html",indexPage+maxnum,maxnum)
+        HttpTool.sharedInstance.apiFetchData(url) { (response, responseObject, error) in
             if(error != nil){
                 print("\(error)")
             }else{
@@ -84,7 +77,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.tableView.reloadData()
             }
         }
-        dataTask.resume()
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count

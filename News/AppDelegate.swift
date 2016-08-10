@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tabController = UITabBarController()
         let vc_1 = HomeViewController()
-        let vc_2 = ViewController()
+        let vc_2 = NavTabViewController()
         let vc_3 = ViewController()
         let vc_4 = ViewController()
         let vc_5 = ViewController()
