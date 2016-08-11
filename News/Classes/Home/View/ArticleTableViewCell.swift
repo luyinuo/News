@@ -73,7 +73,7 @@ class ArticleTableViewCell: UITableViewCell {
             make.left.equalTo()(self.contentView).offset()(10)
             make.top.equalTo()(self.contentView).offset()(10)
             make.bottom.equalTo()(self.contentView).offset()(-10)
-            make.width.equalTo()(140)
+            make.width.equalTo()(120)
         }
         titleLabel.mas_remakeConstraints { (make) in
             make.left.equalTo()(self.imgView.mas_right).offset()(10)

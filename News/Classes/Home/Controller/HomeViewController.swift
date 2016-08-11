@@ -18,6 +18,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
+        self.automaticallyAdjustsScrollViewInsets = false
         setupTableView()
         
         fetchData()
